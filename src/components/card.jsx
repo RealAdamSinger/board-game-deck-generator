@@ -2,16 +2,66 @@ import React from 'react';
 
 class Card extends React.PureComponent {
   render() {
-    var { Title, Effect, Use, Discard } = this.props;
+    var {
+      title,
+      text,
+      subtext,
+      height,
+      width,
+      color,
+      backgroundColor,
+      titleColor,
+      titleBackgroundColor,
+      textColor,
+      textBackgroundColor,
+      subtextColor,
+      subtextBackgroundColor
+    } = this.props;
 
     return (
-      <div style={{ height: '3.2in', width: '2in', padding: 3, border: "solid 1px black", display: 'inline-block', verticalAlign: "top" }}>
-        <div style={{ padding: 3, width: '100%', fontWeight: "bold" }}> {Title} </div>
-        <div style={{ padding: 3, width: '100%' }}> Effect: {Effect} </div>
-        <div style={{ padding: 3, width: '100%' }}> Use: {Use} </div>
-        <div style={{ padding: 3, width: '100%' }}> Discard: {Discard} </div>
+      <div
+        className="flex-middle flex-col justify-space-between"
+        style={{
+          color,
+          height,
+          width,
+          padding: 3,
+          border: "solid 1px black",
+          backgroundColor
+        }}
+      >
+        <div
+          style={{
+            padding: 3,
+            width: '100%',
+            fontWeight: "bold",
+            color: titleColor,
+            backgroundColor: titleBackgroundColor
+          }}
+        >
+          {title}
+        </div>
+        <div
+          style={{
+            padding: 3,
+            width: '100%',
+            color: textColor,
+            backgroundColor: textBackgroundColor
+          }}
+        >
+          {text}
+        </div>
+        <div
+          style={{
+            padding: 3,
+            width: '100%',
+            color: subtextColor,
+            backgroundColor: subtextBackgroundColor
+          }}
+        >
+          {subtext}
+        </div>
       </div>
-
     )
   }
 }
