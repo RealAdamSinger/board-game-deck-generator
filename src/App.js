@@ -49,7 +49,7 @@ const defaultValue = `[
   {
     "title": "Plain Card",
     "text": "Play this to do the most generic action in the world!",
-    "subtext": "Wall Staring Contest"
+    "subtext": "Stare at Wall"
   }
 ]`;
 
