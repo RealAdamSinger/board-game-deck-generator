@@ -2,17 +2,48 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import Deck from './components/deck.jsx';
+import TextField from '@material-ui/core/TextField'
+
 class App extends Component {
+
+  state = {
+    value: ''
+  }
+
+  handleChange = (e) => {
+    this.setState( {
+      value: e.target.value
+    })
+  }
+
   render() {
+    var {
+      value
+    } = this.state;
+    
+    var cardArray = [];
+    try {
+        cardArray = JSON.parse(value);
+    } catch (e) {
+        cardArray=[];
+    }
+
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <TextField
+          id="multiline-flexible"
+          label="Multiline"
+          multiline
+          // rowsMax="4"
+          value={this.state.value}
+          onChange={this.handleChange}
+          // className={classes.textField}
+          margin="normal"
+        />
+        <Deck
+          cards={cardArray}
+        />
       </div>
     );
   }
