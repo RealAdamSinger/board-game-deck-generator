@@ -5,7 +5,7 @@
   "homepage": "http://RealAdamSinger.github.io/board-game-deck-generator",
   "dependencies": {
     "@material-ui/core": "^1.2.0",
-    "lodash": "4.0.0^",
+    "lodash": "^4.0.0",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
     "react-to-print": "^1.0.19"
