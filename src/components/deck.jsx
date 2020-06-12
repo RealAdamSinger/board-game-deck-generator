@@ -3,22 +3,28 @@ import _ from 'lodash';
 
 import Card from './card.jsx';
 
-class Hello extends React.PureComponent {
+class Deck extends React.PureComponent {
   render() {
     var {
+      borderThickness,
       width,
-      height
-    } =this.props;
+      height,
+      cutLines
+    } = this.props;
 
     return (
-      <div className="flex" style={{ padding: 10 }}>
+      <div className="" style={{ padding: 10 }}>
         {
           _.map(this.props.cards, (card) => {
-            return <Card 
-              width={width}
-              height={height}
-              {...card } 
-            />
+            return (
+              <Card
+                borderThickness={borderThickness}
+                width={width}
+                height={height}
+                cutLines={cutLines}
+                {...card}
+              />
+            )
           })
         }
       </div>
@@ -26,4 +32,4 @@ class Hello extends React.PureComponent {
   }
 }
 
-export default Hello;
+export default Deck;
