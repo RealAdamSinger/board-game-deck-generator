@@ -55,7 +55,7 @@ const defaultValue = `[
     "subtextBackgroundColor": "#ff0000",
     "backgroundColor": "red",
     "borderColor": "black",
-    "image": "https://en.wikipedia.org/wiki/File:Sterling_Archer.png"
+    "image": "https://upload.wikimedia.org/wikipedia/en/7/74/Sterling_Archer.png"
   }
 ]`;
 
